@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand bg-success navbar-dark">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#"> <i class="bi bi-book-half"></i> BOOKSTORE</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-2">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill"></i> Profil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-unlock-fill"></i> Ubah Password</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Pengaturan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-door-open-fill"></i> Logout</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!--End Header-->
+    <div class="container-lg">
+        <div class="row">
+            <!--Sidebar Navigasi-->
+            <div class="col-lg-3">
+
+                <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mt-2 border ">
+                    <div class="container-fluid">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                            aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="nav nav-pills flex-column flex-grow-1">
+                                    <li class="nav-item">
+                                        <a class="nav-link link-dark" aria-current="page" href="#"><i
+                                                class="bi bi-bag-heart-fill"></i> Dashboard</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Buku 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Buku 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Buku 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--End Sidebar Navigasi-->
+
+            <!--Content-->
+            <div class="col-lg-9">
+                <div class="card mt-2">
+                    <div class="card mb-3">
+                        <img src="SiAnakPintar.jpeg" class="card-img-top" alt="SiAnakPintar" width="300px"
+                            height="450px">
+                        <div class="card-body">
+                            <h5 class="card-title">Si Anak Pintar</h5>
+
+                            <p class="card-text">Novel Si Anak Pintar karya Tere Liye bercerita tentang Pukat, anak
+                                kedua dari keluarga Bapak Syahdan dan Mamak Nur, yang dianggap sebagai anak paling
+                                pintar dalam keluarga. Masa kecil Pukat dipenuhi dengan petualangan, kejadian lucu, dan
+                                pertengkaran dengan kakak dan adik-adiknya. Cerita dimulai dengan Pukat, Bapak, dan
+                                Burlian naik kereta api ke kota. Dalam perjalanan, mereka mengalami perampokan secara
+                                berkelompok di dalam terowongan. Berkat kepintaran Pukat, masalah perampokan dapat
+                                terpecahkan.
+                                Novel Si Anak Pintar berisi campuran rasa penasaran, tegang, seram, lucu, tertawa, dan
+                                bahagia. Orang tua dapat menceritakan kembali isi buku ini kepada anak sebagai salah
+                                satu contoh nyata akan kepintaran, ketekunan, dan kepatuhan anak bangsa. </p>
+
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Content-->
+    </div>
+    <!--Footer-->
+    <div class="text-center bg-light fixed-bottom py-2">
+        Copyright 2024 Pengarang -Farhatun Nafisa
+    </div>
+    <!--End Footer-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
