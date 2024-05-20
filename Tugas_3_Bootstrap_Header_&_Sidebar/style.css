@@ -7,8 +7,4 @@
 .nav-link.active{
     background-color: var(--custom-background-color)!important;
 }
-.custom-img {
-    width: auto; /* Atur lebar otomatis agar proporsional */
-    height: 300px; /* Atur tinggi tetap */
-    object-fit: cover; /* Menjaga proporsi gambar */
-}
+
