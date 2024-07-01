@@ -1,0 +1,45 @@
+body {
+    background-image: url('beige.png');
+    background-size: cover;
+    /* Menutupi seluruh layar */
+    background-position: center;
+    /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat;
+    /* Mencegah pengulangan gambar */
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background: linear-gradient(to bottom right, #F5F5DC, #f5d1c8);
+    /* Gradient background */
+}
+
+@media(max-width:991px) {
+    .sidebar {
+        background: linear-gradient(to bottom right, rgba(245, 245, 220, 0.8), rgba(245, 209, 200, 0.8));
+    }
+    
+}
+.dropdown-menu-columns {
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 10px; /* Menambah padding sekitar seluruh menu dropdown */
+}
+.dropdown-item {
+    white-space: normal;
+    padding: 10px 15px; /* Menambah padding untuk memberi jarak lebih baik */
+}
+.offcanvas-body {
+    display: inline-block;
+    gap: 1rem;
+}
+.btn-beige {
+    background-color: #f5f5dc;
+}
+.nav-links {
+    padding-left: 30px; 
+}
+
