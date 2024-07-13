@@ -4,6 +4,7 @@ body {
     /* Menutupi seluruh layar */
     background-position: center;
     /* Menempatkan gambar di tengah */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     /* Mencegah pengulangan gambar */
 }
@@ -20,6 +21,7 @@ body {
 @media(max-width:991px) {
     .sidebar {
         background: linear-gradient(to bottom right, rgba(245, 245, 220, 0.8), rgba(245, 209, 200, 0.8));
+        /* Semi-transparent gradient */
     }
     
 }
@@ -42,4 +44,3 @@ body {
 .nav-links {
     padding-left: 30px; 
 }
-

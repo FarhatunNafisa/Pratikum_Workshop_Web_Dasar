@@ -27,5 +27,3 @@ Sebuah aplikasi yang dapat digunakan untuk pembelian buku secara online, menyedi
 - Mengubah status pesanan menjadi "dalam pengiriman" atau "selesai"
 - Mengirim notifikasi kepada pelanggan tentang status pesanan
 - Mengelola transaksi pembayaran dengan protokol keamanan terbaru
-
-
