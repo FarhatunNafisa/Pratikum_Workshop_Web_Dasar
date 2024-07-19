@@ -13,6 +13,7 @@ session_start();
 </head>
 
 <body>
+
     <?php
     if (isset($_GET['x']) && $_GET['x'] == 'login') {
         include "index6.php";
@@ -20,6 +21,12 @@ session_start();
         include "index8.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'logout') {
         include "index12.php";
+    } elseif (isset($_GET['x']) && $_GET['x'] == 'tambahuser') {
+        include "index16.php";
+    } elseif (isset($_GET['x']) && $_GET['x'] == 'edit') {
+        include "index17.php";
+    } elseif (isset($_GET['x']) && $_GET['x'] == 'delete') {
+        include "index18.php";
     } else {
         include "../index5.php";
     }

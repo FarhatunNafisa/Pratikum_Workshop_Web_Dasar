@@ -14,7 +14,6 @@ Sebuah aplikasi yang dapat digunakan untuk pembelian buku secara online, menyedi
 - Mengelola pesanan (update atau hapus)
 - Memberikan ulasan dan rating buku
 - Melihat riwayat pembelian
-- Menyimpan buku ke daftar keinginan
 ## Penjual
 - Menambah buku ke katalog
 - Mengelola informasi buku (judul, penulis, deskripsi, harga)

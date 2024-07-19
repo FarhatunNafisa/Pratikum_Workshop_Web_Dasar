@@ -94,6 +94,11 @@
                             </div>
                             <div class="signin">
                                 <span>Already have an account? <a href="signin">Log in here</a> </span>
+                                <br><br>
+                                <p>SILAHKAN SIGN UP UNTUK MENJADI PELANGGAN. JIKA UNTUK ADMIN SILAHKAN LOGIN DENGAN DATA BERIKUT:</p>
+                                <p><b>EMAIL: farhatun@gmail.com</b><br>
+                                <b>PASS: 12345678</b>
+                            </p>
                             </div>
                         </div>
                     </div>
