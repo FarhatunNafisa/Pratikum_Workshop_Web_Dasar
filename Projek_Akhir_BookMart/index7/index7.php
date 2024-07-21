@@ -16,19 +16,25 @@ session_start();
 
     <?php
     if (isset($_GET['x']) && $_GET['x'] == 'login') {
-        include "index6.php";
+        include "login.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'signin') {
-        include "index8.php";
+        include "signin.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'logout') {
-        include "index12.php";
+        include "logout.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'tambahuser') {
-        include "index16.php";
+        include "tambahuser.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'edit') {
-        include "index17.php";
+        include "edit.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'delete') {
-        include "index18.php";
-    } else {
-        include "../index5.php";
+        include "delete.php";
+    } elseif (isset($_GET['x']) && $_GET['x'] == 'reset_password') {
+        include "reset_password.php";
+    } elseif (isset($_GET['x']) && $_GET['x'] == 'ubah_password') {
+        include "ubah_password.php";
+    }elseif (isset($_GET['x']) && $_GET['x'] == 'proses_delete_buku') {
+        include "proses_delete_buku.php";
+    }else {
+        include "../home";
     }
     ?>
 

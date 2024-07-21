@@ -1,3 +1,8 @@
+<?php
+ob_start();
+include "index7/index10.php";
+?>
+
 <!--SIDEBAR-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top sticky-top">
     <div class="container-lg">
@@ -28,21 +33,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'rekomendasibuku') ? 'custom-active' : 'link-dark'; ?>" aria-current="page" href="rekomendasibuku">Beli Buku</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <?php $isActive = (isset($_GET['x']) && $_GET['x'] == 'kategori') ? 'custom-active' : 'link-dark'; ?>
-                        <a class="nav-link dropdown-toggle ps-2 <?php echo $isActive; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Kategori
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-columns mt-4">
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=agama-islam">Agama Islam</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=arsitektur">Arsitektur</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=bahasa-dan-sastra">Bahasa dan Sastra</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=biologi">Biologi</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=bisnis">Bisnis</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=ekonomi">Ekonomi</a></li>
-                            <li><a class="dropdown-item" href="index.php?x=kategori&category=farmasi">Farmasi</a></li>
-                        </ul>
                     </li>
 
                     <li class="nav-item">
@@ -110,7 +100,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="needs-validation" action="index7/index19.php" method="POST" novalidate>
+                <form class="needs-validation" action="index7/ubah_password.php" method="POST" novalidate>
                     <input type="hidden" value="<?php echo $_SESSION['user']['email']; ?>" name="email">
                     <div class="row">
                         <div class="col-lg-6">

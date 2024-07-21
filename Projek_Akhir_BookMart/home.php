@@ -76,7 +76,7 @@
                                         <span class="badge bg-danger">Best Seller</span>
                                         <h5 class="card-title card-title-custom">ANTARIKSA</h5>
                                         <p class="card-text card-text-custom">TRESIA</p>
-                                        <p class="card-text card-price-custom">Rp 131.000</p>
+                                        <p class="card-text card-price-custom">Rp 131.000,00</p>
                                     </div>
                                 </div>
                             </a>
@@ -87,9 +87,9 @@
                                     <img src="novel3.png" class="card-img-top img-fluid" alt="Promo">
                                     <div class="card-body card-body-custom">
                                         <span class="badge bg-danger">Best Seller</span>
-                                        <h5 class="card-title card-title-custom">Handbook For Beginner Analisa Dan Desain Struktur Baja</h5>
-                                        <p class="card-text card-text-custom">Yudha Lesmana</p>
-                                        <p class="card-text card-price-custom">Rp 131.000</p>
+                                        <h5 class="card-title card-title-custom""card-title card-title-custom">NOCEUR LIGHTS</h5>
+                                        <p class="card-text card-text-custom">Renita Nozaria</p>
+                                        <p class="card-text card-price-custom">Rp 200.000,00</p>
                                     </div>
                                 </div>
                             </a>
@@ -100,8 +100,8 @@
                                     <img src="novel4.png" class="card-img-top img-fluid" alt="Promo">
                                     <div class="card-body card-body-custom">
                                         <span class="badge bg-danger">Best Seller</span>
-                                        <h5 class="card-title card-title-custom">Handbook For Beginner Analisa Dan Desain Struktur Baja</h5>
-                                        <p class="card-text card-text-custom">Yudha Lesmana</p>
+                                        <h5 class="card-title card-title-custom">CLAIRES</h5>
+                                        <p class="card-text card-text-custom">Valeria Patkar</p>
                                         <p class="card-text card-price-custom">Rp 131.000</p>
                                     </div>
                                 </div>
@@ -147,4 +147,25 @@
         background-color: #b08d57;
 
     }
+    
+.card-title-custom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem; 
+    font-weight: 600;
+    color: #333; 
+    margin-bottom: 0.5rem; 
+}
+.card-text-custom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; 
+    color: #555; 
+    margin-bottom: 0.5rem; 
+}
+.card-price-custom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem; 
+    font-weight: 700; 
+    color: #e74c3c; 
+}
+
 </style>

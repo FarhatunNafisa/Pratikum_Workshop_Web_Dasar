@@ -1,3 +1,13 @@
+<?php
+include "index7/index10.php";
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT id, foto, judul, pengarang, penerbit, harga FROM tb_buku";
+$result = $conn->query($sql);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,30 +24,26 @@
 <body style="height:3000px">
     <!--Navbar-->
     <!--Akhir Navbar-->
-
     <!--Content-->
     <div class="container-lg mt-5 pt-4">
         <div class="row justify-content-center">
             <?php
-            include "index7/index10.php";
-
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            $sql = "SELECT foto, judul, pengarang, penerbit, harga FROM tb_buku"; 
-            $result = $conn->query($sql);
-
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">';
                     echo '    <div class="card h-100">';
                     echo '        <img src="img/' . htmlspecialchars($row['foto']) . '" class="card-img-top" alt="' . htmlspecialchars($row['judul']) . '">';
                     echo '        <div class="card-body">';
-                    echo '            <h5 class="card-title">' . htmlspecialchars($row['judul']) . '</h5>';
-                    echo '            <p class="card-text"> ' . htmlspecialchars($row['pengarang']) . '</p>';
-                    echo '            <p class="card-text"> ' . htmlspecialchars($row['penerbit']) . '</p>';
+                    echo '            <h5 class="card-title card-title-custom">' . htmlspecialchars($row['judul']) . '</h5>';
+                    echo '            <p class="card-text card-text-custom"> ' . htmlspecialchars($row['pengarang']) . '</p>';
+                    echo '            <p class="card-text card-text-custom"> ' . htmlspecialchars($row['penerbit']) . '</p>';
                     echo '            <p class="card-text card-price-custom ">     Rp ' . number_format($row['harga'], 2, ',', '.') . '</p>';
-                    echo '            <button class="btn btn-warning btn-sm">Masukkan ke keranjang</button>';
+                    echo '            <form method="post" action="keranjang">';
+                    echo '                <input type="hidden" name="id" value="' . $row['id'] . '">';
+                    echo '                <input type="hidden" name="judul" value="' . htmlspecialchars($row['judul']) . '">';
+                    echo '                <input type="hidden" name="harga" value="' . $row['harga'] . '">';
+                    echo '                <button type="submit" name="add_to_cart" class="btn btn-warning btn-sm">Masukkan ke keranjang</button>';
+                    echo '            </form>';
                     echo '        </div>';
                     echo '    </div>';
                     echo '</div>';
@@ -50,10 +56,12 @@
             ?>
         </div>
     </div>
-
-
-    </div>
     <!--End Content-->
+
+
+
+
+
     <div class="fixed-bottom text-center" style="background: linear-gradient(to bottom right, #F5F5DC, #f5d1c8);">
         <div style="font-weight:bold; word-spacing: 5px;">Build with <i class="bi bi-heart-fill"></i> by <a href="https://identitas.rf.gd/Projek_Akhir_BookMart/">BookMart</a></div>
 
@@ -92,9 +100,26 @@
             color: #6c757d;
         }
 
+        .card-title-custom {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text-custom {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
         .card-price-custom {
-            font-weight: bold;
-            color: #d2b48c;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #e74c3c;
         }
 
         .btn-custom {

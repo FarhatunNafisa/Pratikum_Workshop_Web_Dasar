@@ -301,7 +301,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                         <div class="modal-body">
                                             <form class="needs-validation" action="index7/delete" method="POST" novalidate>
-                                                
+
                                                 <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
                                                 <div class="col-lg-12">
                                                     <?php
@@ -339,7 +339,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="needs-validation" action="index7/index20.php" method="POST" novalidate>
+                                            <form class="needs-validation" action="index7/reset_password" method="POST" novalidate>
                                                 <!--Proses Edit User ada di Index 7/Index17-->
                                                 <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
                                                 <div class="col-lg-12">
@@ -368,7 +368,7 @@ while ($record = mysqli_fetch_array($query)) {
                                 </div>
                             </div>
                             <!-- Akhir Modal Reset Password-->
-                            
+
                         <?php
                         }
                         ?>
@@ -380,59 +380,58 @@ while ($record = mysqli_fetch_array($query)) {
                         ?>
                     </div>
 
-                    <div class="table-responsive me-3 ms-3">
-                        <table class="table table-warning table-hover">
-                            <thead>
-                                <tr class="table-danger">
-                                    <th scope="col">No</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Level</th>
-                                    <th scope="col">No HP</th>
-                                    <th scope="col">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $no = 1;
-                                foreach ($hasil as $row) {
 
-                                ?>
-                                    <tr>
-                                        <th scope="row"><?php echo $no++ ?></th>
-                                        <td><?php echo $row['nama'] ?> </td>
-                                        <td><?php echo $row['email'] ?> </td>
-                                        <td><?php
-                                            if ($row['level'] == 1) {
-                                                echo "Pemilik/Admin";
-                                            } elseif ($row['level'] == 2) {
-                                                echo "Penjual";
-                                            } else {
-                                                echo "Pelanggan";
-                                            }
-                                            ?> </td>
-                                        <td><?php echo $row['NoHp'] ?> </td>
-                                        <td class="d-flex">
-                                            <button class="btn btn-info btn-sm me-1"><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#ModalView<?php echo $row['id'] ?>"></i></button>
-                                            <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['id'] ?>"><i class="bi bi-pencil-square"></i></i></button>
-                                            <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalDelete<?php echo $row['id'] ?>"><i class="bi bi-trash"></i></i></button>
-                                            <button class="btn btn-secondary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalResetPassword<?php echo $row['id'] ?>"><i class="bi bi-key"></i></i></i></button>
-                                        </td>
-                                    </tr>
-                                <?php
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
                 <?php
                         }
                 ?>
+                <div class="table-responsive me-3 ms-3">
+                    <table class="table table-warning table-hover">
+                        <thead>
+                            <tr class="table-danger">
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">No HP</th>
+                                <th scope="col">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $no = 1;
+                            foreach ($hasil as $row) {
+
+                            ?>
+                                <tr>
+                                    <th scope="row"><?php echo $no++ ?></th>
+                                    <td><?php echo $row['nama'] ?> </td>
+                                    <td><?php echo $row['email'] ?> </td>
+                                    <td><?php
+                                        if ($row['level'] == 1) {
+                                            echo "Pemilik/Admin";
+                                        } elseif ($row['level'] == 2) {
+                                            echo "Penjual";
+                                        } else {
+                                            echo "Pelanggan";
+                                        }
+                                        ?> </td>
+                                    <td><?php echo $row['NoHp'] ?> </td>
+                                    <td class="d-flex">
+                                        <button class="btn btn-info btn-sm me-1"><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#ModalView<?php echo $row['id'] ?>"></i></button>
+                                        <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['id'] ?>"><i class="bi bi-pencil-square"></i></i></button>
+                                        <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalDelete<?php echo $row['id'] ?>"><i class="bi bi-trash"></i></i></button>
+                                        <button class="btn btn-secondary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalResetPassword<?php echo $row['id'] ?>"><i class="bi bi-key"></i></i></i></button>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     </div>
 
     <!--End Content-->

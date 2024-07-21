@@ -27,28 +27,28 @@ if (session_status() == PHP_SESSION_NONE) {
     <!--Content-->
     <?php
     if (isset($_GET['x']) && $_GET['x'] == 'home') {
-        include "index5.php";
+        include "home.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'promo') {
-        include "index1.php";
+        include "promo.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'rekomendasibuku') {
-        include "index2.php";
+        include "rekomendasibuku.php";
     }  elseif (isset($_GET['x']) && $_GET['x'] == 'keranjang') {
-        include "index4.php";
+        include "keranjang.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'admin') {
         if (isset($_SESSION['user']['level']) && ($_SESSION['user']['level'] == 1 || $_SESSION['user']['level'] == 2)) {
-            include "index14.php";
+            include "admin.php";
             
         } else {
             include "index5.php";
         }
     } elseif (isset($_GET['x']) && $_GET['x'] == 'laporan') {
-        include "index14.php";
+        include "admin.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'user') {
-        include "index15.php";
+        include "user.php";
     } elseif (isset($_GET['x']) && $_GET['x'] == 'kategori' && isset($_GET['category'])) {
-        include "index3.php";
+        include "kategori.php";
     }else {
-        include "index5.php";
+        include "home.php";
     } 
     ?>
 

@@ -37,7 +37,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 'email' => $user['email'],
                                 'level' => $user['level']
                             ];
-                            // Redirect ke halaman home
+                            //ketika sudah msuk ke halaman home
                             header("Location: ../home");
                             exit();
                         } else {
@@ -46,6 +46,12 @@ if (session_status() == PHP_SESSION_NONE) {
                     } else {
                         echo "<div class='alert alert-danger'>Email tidak valid</div>";
                     }
+                }
+
+                //tampilkan pesan ke pengguna ketika blum login tp mengakses keranjang
+                if (isset($_SESSION['message'])) {
+                    echo '<div class="alert alert-info" role="alert">' . htmlspecialchars($_SESSION['message']) . '</div>';
+                    unset($_SESSION['message']);
                 }
                 ?>
                 <div class="input_box">

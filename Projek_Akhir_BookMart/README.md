@@ -15,11 +15,13 @@ Sebuah aplikasi yang dapat digunakan untuk pembelian buku secara online, menyedi
 - Memberikan ulasan dan rating buku
 - Melihat riwayat pembelian
 ## Penjual
-- Menambah buku ke katalog
+- Menambah/mengubah/menghapus daftar buku dan harga
 - Mengelola informasi buku (judul, penulis, deskripsi, harga)
 - Memantau stok buku
 - Mengelola pesanan dari pelanggan
 - Melihat laporan penjualan produk mereka
+
+
 ## Sistem
 - Menerima pesanan
 - Konfirmasi terima pesanan
